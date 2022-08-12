@@ -1,0 +1,13 @@
+const express = require('express')
+const { getData, createResources, updateResoruce } = require('../controllers/dataControllers')
+
+
+const router = express.Router()
+
+router.get('/', getData)
+
+router.post('/', createResources)
+
+router.patch('/:id', updateResoruce)
+
+module.exports = router
